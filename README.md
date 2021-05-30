@@ -1,10 +1,12 @@
-# TIENDA DE BARRIO - PUNTO DE VISTA DE LA ORGANIZACIÓN
+# TIENDA DE BARRIO
+
+## PUNTO DE VISTA DE LA ORGANIZACIÓN
 
 ## Estudiantes
 
-- **-** Juan Camilo Herrera Ardila - 20211099031
-- **-** Andres Arturo Vergara - 20211099039
-- **-** Cristian Camilo Roncancio Peña - 20211099036
+- **Juan Camilo Herrera Ardila - 20211099031**
+- **Andres Arturo Vergara - 20211099039**
+- **Cristian Camilo Roncancio Peña - 20211099036**
 
 ## Organización tienda
 ----------------------------------------
@@ -12,19 +14,19 @@
 
 ## Organización domicilio
 ----------------------------------------
-![organizacion domicilio](imagenes/Organizacion Domicilio.png)
+![organizacion domicilio](imagenes/OrganizacionDomicilio.png)
 
 ## Cooperación despacho mercancías
 ----------------------------------------
-![cooperacion despacho mercancias](imagenes/Coperacion despacho de mercancias.png)
+![cooperacion despacho mercancias](imagenes/Coperaciondespachodemercancias.png)
 
 ## Funciones de negocio
 ----------------------------------------
-![funciones de negocio](imagenes/Funciones de negocio.png)
+![funciones de negocio](imagenes/Funcionesdenegocio.png)
 
 ## Procesos de negocio
 ----------------------------------------
-![procesos de negocio](imagenes/Procesos de negocio.png)
+![procesos de negocio](imagenes/Procesosdenegocio.png)
 
 ## Cooperación procesos de negocio
 ----------------------------------------
@@ -36,27 +38,27 @@
 
 ## Comportamiento de aplicación
 ----------------------------------------
-![comportamiento de aplicacion](imagenes/Comportamiento de aplicación.png)
+![comportamiento de aplicacion](imagenes/Comportamientodeaplicacion.png)
 
 ## Por capas
 ----------------------------------------
-![por capas](imagenes/por capas.png)
+![por capas](imagenes/porcapas.png)
 
 ## Estructura de información
 ----------------------------------------
-![estructura de informacion](imagenes/Estructura de información.png)
+![estructura de informacion](imagenes/Estructuradeinformacion.png)
 
 ## Realización de servicios
 ----------------------------------------
-![realizacion de servicios](imagenes/Realización de servicios.png)
+![realizacion de servicios](imagenes/Realizaciondeservicios.png)
 
 ## Uso de aplicación
 ----------------------------------------
-![uso de aplicacion](imagenes/Uso de aplicación.png)
+![uso de aplicacion](imagenes/Usodeaplicacion.png)
 
 ## Estructura de aplicación
 ----------------------------------------
-![estructura de aplicacion](imagenes/Estructura de aplicación.png)
+![estructura de aplicacion](imagenes/Estructuradeaplicacion.png)
 
 ## Infraestructura
 ----------------------------------------
@@ -64,12 +66,12 @@
 
 ## Uso de infraestructura
 ----------------------------------------
-![uso infraestructura](imagenes/Uso de infraestructura.png)
+![uso infraestructura](imagenes/Usodeinfraestructura.png)
 
 # Organización e implementación
 ----------------------------------------
-![organizacion e implementacion](imagenes/Organización e implementación.png)
+![organizacion e implementacion](imagenes/Organizacioneimplementacion.png)
 
 # Cooperación de aplicaciones
 ----------------------------------------
-![cooperacion aplicaciones](imagenes/Cooperación de aplicaciones.png)
+![cooperacion aplicaciones](imagenes/Cooperaciondeaplicaciones.png)
