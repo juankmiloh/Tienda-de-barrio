@@ -13,9 +13,9 @@ db = SQLAlchemy(app)
 
 class domiciliario(db.Model):
     id = db.Column("domiciliario_id", db.Integer, primary_key=True)
-    domiciliario_nombre =  db.Column(db.String(100))
-    domiciliario_cedula =  db.Column(db.Integer)
-    domiciliario_direccion =  db.Column(db.String(100))
+    domiciliario_nombre = db.Column(db.String(100))
+    domiciliario_cedula = db.Column(db.Integer)
+    domiciliario_direccion = db.Column(db.String(100))
     domiciliario_telefono = db.Column(db.Integer)
     domiciliario_email = db.Column(db.String(100))
 
@@ -25,6 +25,7 @@ class domiciliario(db.Model):
         self.domiciliario_direccion = datos["direccion"]
         self.domiciliario_telefono = datos["telefono"]
         self.domiciliario_email = datos["email"]
+
 
 @app.route("/")
 @cross_origin()
@@ -43,7 +44,7 @@ def principal():
         diccionario_productos[d.id] = p
     return diccionario_productos
 
-# http://127.0.0.1:5000/agregar/pedro/123456/avenida_siempre_viva/3118683006/juan@hotmail.com
+
 @app.route("/agregar/<nombre>/<int:cedula>/<direccion>/<int:telefono>/<email>")
 @cross_origin()
 def agregar(nombre, cedula, direccion, telefono, email):
@@ -59,7 +60,7 @@ def agregar(nombre, cedula, direccion, telefono, email):
     db.session.commit()
     return redirect(url_for('principal'))
 
-# http://127.0.0.1:5000/eliminar/1
+
 @app.route("/eliminar/<int:id>")
 @cross_origin()
 def eliminar(id):
@@ -71,7 +72,7 @@ def eliminar(id):
 
 @app.route("/actualizar/<int:id>/<nombre>/<int:cedula>/<direccion>/<int:telefono>/<email>")
 @cross_origin()
-def actualizar(id, nombre, cedula, direccion,telefono,email):
+def actualizar(id, nombre, cedula, direccion, telefono, email):
     p = domiciliario.query.filter_by(id=id).first()
     p.domiciliario_nombre = nombre
     p.domiciliario_cedula = cedula
@@ -80,6 +81,7 @@ def actualizar(id, nombre, cedula, direccion,telefono,email):
     domiciliario_email = email
     db.session.commit()
     return redirect(url_for('principal'))
+
 
 @app.route("/buscar/<int:id>")
 @cross_origin()
