@@ -43,7 +43,7 @@ def principal():
         diccionario_productos[d.id] = p
     return diccionario_productos
 
-# http://127.0.0.1:5000/agregar/borrador/10/1800
+# http://127.0.0.1:5000/agregar/pedro/123456/avenida_siempre_viva/3118683006/juan@hotmail.com
 @app.route("/agregar/<nombre>/<int:cedula>/<direccion>/<int:telefono>/<email>")
 @cross_origin()
 def agregar(nombre, cedula, direccion, telefono, email):

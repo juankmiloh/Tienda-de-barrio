@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///productos.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../Database/tienda.db'
 app.config['SECRET_KEY'] = '123'
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-type'
