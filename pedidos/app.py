@@ -15,7 +15,7 @@ class pedidos(db.Model):
     consecutivo = db.Column("consecutivo", db.Integer, primary_key=True)
     pedido_id_pedido = db.Column(db.Integer)
     pedido_id_domiciliario = db.Column(db.Integer)
-    pedido_id_cliente =  db.Column(db.Integer)
+    pedido_id_cliente = db.Column(db.Integer)
     pedido_id_producto = db.Column(db.Integer)
     pedido_cantidad = db.Column(db.Integer)
 
@@ -25,6 +25,7 @@ class pedidos(db.Model):
         self.pedido_id_cliente = datos["id_cliente"]
         self.pedido_id_producto = datos["id_producto"]
         self.pedido_cantidad = datos["cantidad"]
+
 
 @app.route("/")
 @cross_origin()
@@ -42,10 +43,10 @@ def principal():
         diccionario_pedidos[d.consecutivo] = p
     return diccionario_pedidos
 
-# http://127.0.0.1:5000/agregar/pedro/123456/avenida_siempre_viva/3118683006/juan@hotmail.com
+# http://127.0.0.1:5000/agregar/1/1/1/1/50
 @app.route("/agregar/<int:pedido>/<int:domiciliario>/<int:cliente>/<int:producto>/<int:cantidad>")
 @cross_origin()
-def agregar(pedido,cliente, producto, domiciliario,cantidad):
+def agregar(pedido, cliente, producto, domiciliario, cantidad):
     datos = {
         "id_pedido": pedido,
         "id_domiciliario": domiciliario,
@@ -68,10 +69,10 @@ def eliminar(pedido):
     db.session.commit()
     return redirect(url_for('principal'))
 
-
+# http://127.0.0.1:5000/actualizar/5/1/1/3/6
 @app.route("/actualizar/<int:consecutivo>/<int:domiciliario>/<int:cliente>/<int:producto>/<int:cantidad>")
 @cross_origin()
-def actualizar(consecutivo,cliente, producto, domiciliario,cantidad):
+def actualizar(consecutivo, cliente, producto, domiciliario, cantidad):
     p = pedidos.query.filter_by(consecutivo=consecutivo).first()
     p.pedido_id_domiciliario = domiciliario
     p.pedido_id_cliente = cliente
@@ -80,6 +81,7 @@ def actualizar(consecutivo,cliente, producto, domiciliario,cantidad):
     db.session.commit()
     return redirect(url_for('principal'))
 
+# http://127.0.0.1:5000/buscar/2
 @app.route("/buscar/<int:pedido>")
 @cross_origin()
 def buscar(pedido):
